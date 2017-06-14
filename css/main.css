@@ -1,0 +1,165 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: "Microsoft YaHei";
+	position: relative;
+}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%}
+#rcpage1{
+	background: url("../images/bg1.png") no-repeat top;
+	background-size: cover;
+}
+#rcpage2{
+	background: url("../images/bg2.png") no-repeat center;
+	background-size: cover;
+}
+#rcpage3{
+	background: url("../images/bg3.png") no-repeat center;
+	background-size: cover;
+}
+#rcpage4{
+	background: url("../images/bg4.png") no-repeat center;
+	background-size: cover;
+}
+#rcpage5{
+	background: url("../images/bg5.png") no-repeat center;
+	background-size: cover;
+}
+#rcpage6{
+	background: url("../images/bg6.png") no-repeat center;
+	background-size: cover;
+}
+.wrap img{
+	width: 90%;
+	margin: 0 5%;
+	visibility: hidden;
+}
+.fp-completely .wrap img{
+	visibility: visible;
+	animation-duration: 0.8s;
+}
+.wrap .apply{
+	margin-top: -15px;
+}
+#second3{
+	margin-top: -20px;
+}
+.mask{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+.mask .model{
+	width: 86%;
+	margin: 0 auto;
+	position: absolute;
+	top: 100px;
+	left: 7%;
+	background: #F9F9F9;
+	z-index: 100;
+	border-radius: 5px;
+	color: #333;
+}
+.mask .model h1{
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 17px;
+	background-color: #0089F1;
+	border-radius: 5px 5px 0 0;
+	color: #FFF;
+	font-family: "Microsoft YaHei";
+}
+.group{
+	font-size: 14px; 
+	height: 30px;
+	padding-bottom: 15px;
+}
+.group form{
+	position: relative;
+}
+.group .labels{
+	display: block;
+	float: left;
+	vertical-align: middle;	
+	padding-right: 15px;
+	margin-left: 5%;
+	margin-top: 5px; 
+}
+.group .input-box{
+	float: left;
+	box-shadow: none;
+	display: block;
+	width: 65%;
+	height: 22px;
+	padding: 6px 6px;
+	font-size: 14px;
+	color: #555;
+	background-color: #FFF;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	vertical-align: middle;	
+	font-family: "Microsoft YaHei";
+	-webkit-appearance: none;
+}
+.group .commit{
+	width: 80%;
+	height: 35px;
+	margin-left: 10%;
+	color: #FFF;
+	background-color: #23C36A;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 0;
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+}
+.mask .close{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	background: url("../images/close.png") no-repeat center;
+	background-size: cover;
+}
+.music{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: url("../images/music.png") no-repeat center;
+	background-size: cover;
+}
+.rotate{
+	animation: change 2s linear infinite;
+	-webkit-animation:change 2s linear infinite;
+}
+.arrow{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 40px;
+	left: calc(50% - 15px);
+	background: url("../images/arrow.png") no-repeat center;
+	background-size: cover;
+	animation: float 2s linear infinite;
+	-webkit-animation:float 2s linear infinite;
+}
+@keyframes change{
+	0% {-webkit-transform:rotate(360deg);}
+}
+@keyframes float{
+	0% {-webkit-transform:translate(0,-10px);}
+	50% {-webkit-transform:translate(0,10px);}
+	100% {-webkit-transform:translate(0,-10px);}
+}
