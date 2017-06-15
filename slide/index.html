@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Slide Unlock</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.slideunlock.css">
+</head>
+<body>
+    <div id="slide-wrapper">
+        <input type="hidden" value="" id="lockable"/>
+        <div id="slider">
+            <span id="label"></span>
+            <span id="lableTip">Slide to unlock!</span>
+        </div>
+    </div>
+    <button id="reset-btn">重置</button>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slideunlock.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        var slider = new SliderUnlock("#slider", {}, function(){
+            //滑动成功调用
+            console.log('success');
+        }, function(){
+    
+        });
+        slider.init();
+
+        $("#reset-btn").on('click', function(){
+            slider.reset();
+        });
+    })
+    </script>
+</body>
+</html>
