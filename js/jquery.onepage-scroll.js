@@ -30,7 +30,7 @@
     direction : 'vertical',
     forbidden : []
 	};
-
+	var isAnimating = false;
 	/*------------------------------------------------*/
 	/*  Credit: Eike Send for the awesome swipe event */
 	/*------------------------------------------------*/
@@ -99,6 +99,7 @@
       /*if (settings.forbidden.length != 0 ) {return false;};*/
       // Just a simple edit that makes use of modernizr to detect an IE8 browser and changes the transform method into
     	// an top animate so IE8 users can also use this script.
+
     	if($('html').hasClass('ie8')){
         if (settings.direction == 'horizontal') {
           var toppos = (el.width()/100)*pos;
@@ -120,6 +121,7 @@
     	  });
     	}
       $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+      	isAnimating = false;
         if (typeof settings.afterMove == 'function') settings.afterMove(index);
       });
     }
@@ -313,6 +315,8 @@
 
     el.swipeEvents().bind("swipeDown",  function(event){
       if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+      if(isAnimating) return;
+      isAnimating = false;
       var index = $(settings.sectionContainer +".active").data("index");
       for(var val of settings.forbidden){
       	if(val == index){
@@ -322,6 +326,8 @@
       el.moveUp();
     }).bind("swipeUp", function(event){
       if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+      if(isAnimating) return;
+      isAnimating = false;
       var index = $(settings.sectionContainer +".active").data("index");
       for(var val of settings.forbidden){
       	if(val == index){
