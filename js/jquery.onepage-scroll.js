@@ -54,7 +54,7 @@
         }
 
         function touchmove(event) {
-        	event.preventDefault();
+        	/*event.preventDefault();*/
           var touches = event.originalEvent.touches;
           if (touches && touches.length) {
             var deltaX = startX - touches[0].pageX;

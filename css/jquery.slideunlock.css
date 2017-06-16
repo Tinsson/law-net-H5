@@ -1,0 +1,44 @@
+
+#slide-wrapper{
+    width: 100%;
+    position: absolute;
+    padding: 10vw;
+    background: #fff;
+    margin: 0 auto;
+    bottom: 0;
+}
+#slider{
+    padding:20px;
+    position: relative;
+    border-radius: 2px;
+    background-color: #FDEB9C;
+    overflow: hidden;
+    text-align: center;
+}
+#slider.success{
+    background-color: #E5EE9F;
+}
+#label{
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #E67E22;
+    z-index: 999;
+    cursor: pointer;
+}
+#labelTip{
+    z-index: 9;
+}
+
+#reset-btn{
+    margin: 20px 0 10px 0;
+}
+
+@media screen and (max-width: 640px) {
+    #slide-wrapper{
+
+        width: 80vw;
+    }
+}
