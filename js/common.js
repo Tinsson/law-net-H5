@@ -21,9 +21,6 @@ $(document).ready(function(){
 		$("#fullpage").moveDown()
 	})
 
-	/*$("#rcpage2").on("click",function(){
-		$("#fullpage").moveUp()
-	})*/
 
 	$(".music").on("touchend",function(){
 		var ado = document.getElementById("ado");
