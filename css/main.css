@@ -44,7 +44,7 @@ body{
 	margin-top: -20px;
 }
 .mask{
-
+	/*display:none;*/
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -125,6 +125,10 @@ body{
 	background: url("../images/music.png") no-repeat center;
 	background-size: cover;
 }
+.fade-sm{
+	animation: fade1 1s linear;
+	-webkit-animation: fade1 1s linear;
+}
 .rotate{
 	animation: change 2s linear infinite;
 	-webkit-animation:change 2s linear infinite;
@@ -147,4 +151,9 @@ body{
 	0% {-webkit-transform:translate(0,-10px);}
 	50% {-webkit-transform:translate(0,10px);}
 	100% {-webkit-transform:translate(0,-10px);}
+}
+
+@keyframes fade1{
+	0%	{opacity: 1;transform: scale3d(1,1,1);}
+	100%{opacity: 0;transform: scale3d(0.9,0.9,0.9);}
 }

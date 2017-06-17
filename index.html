@@ -10,23 +10,13 @@
 	<link rel="stylesheet" href="./css/animate.min.css">
 	<link rel="stylesheet" href="./css/main.css">
 	<script src="./js/jquery.js"></script>
-	<script src="./js/jquery.mobile.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<!--<script src="./js/jquery.mobile.min.js"></script>-->
 	<script src="./js/jquery.onepage-scroll.js"></script>
 	<script src="./js/jquery.slideunlock.js"></script>
 	<script src="./js/common.js"></script>
 </head>
 <body>
-	<div class="mask">
-		<div class="logo">
-			<img src="./images/logo.jpg" alt="">
-		</div>
-		<div id="slide-wrapper">
-			<div id="slider">
-				<span id="label"></span>
-				<span id="lableTip">滑动解锁</span>
-			</div>
-		</div>
-	</div>
 	<div id="fullpage">
 		<div id="rcpage1" class="section">
 
@@ -42,20 +32,25 @@
 		</div>
 	</div>
 
-	<div class="music rotate" style="display: none">
+	<div class="music rotate">
 		<audio autoplay id="ado" loop="loop">
 			<source src="./audio/1.mp3"></source>
 		</audio>
 	</div>
 	<div class="arrow"></div>
+	<div class="mask">
+		<div class="logo">
+			<img src="./images/logo1.jpg" alt="">
+		</div>
+		<div id="slide-wrapper">
+			<div id="slider">
+				<span id="label"></span>
+				<span id="lableTip">drop to slide</span>
+			</div>
+		</div>
+	</div>
 	<script>
-		var slider = new SliderUnlock("#slider", {}, function(){
-			//滑动成功调用
-			console.log('success');
-		}, function(){
 
-		});
-		slider.init();
 	</script>
 </body>
 </html>

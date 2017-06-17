@@ -14,13 +14,20 @@ $(document).ready(function(){
 		},
 		loop: false,
 		responsiveFallback: false,
-		direction: "vertical",
-		forbidden: [4]
+		direction: "vertical"
 	})
-	$("#rcpage3").on("click",function(){
-		$("#fullpage").moveDown()
+	$("#rcpage1").on("click",function(){
+		console.log(11111);
 	})
 
+    var slider = new SliderUnlock("#slider", {}, function(){
+    	$('.mask').addClass('fade-sm');
+    	setTimeout(function(){
+            $('.mask').hide();
+		},1000);
+    }, function(){
+    });
+    slider.init();
 
 	$(".music").on("touchend",function(){
 		var ado = document.getElementById("ado");
