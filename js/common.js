@@ -14,13 +14,17 @@ $(document).ready(function(){
 		},
 		loop: false,
 		responsiveFallback: false,
-		direction: "vertical"
+		direction: "vertical",
+		forbidden: [3]
 	})
 	$("#rcpage1").on("click",function(){
 		console.log(11111);
 	})
 
-    var slider = new SliderUnlock("#slider", {}, function(){
+    var slider = new SliderUnlock("#slider", {
+		labelTip: "滑动解锁",
+		successLabelTip: "解锁成功"
+	}, function(){
     	$('.mask').addClass('fade-sm');
     	setTimeout(function(){
             $('.mask').hide();

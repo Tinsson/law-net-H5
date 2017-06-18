@@ -8,15 +8,16 @@
     bottom: 0;
 }
 #slider{
+    color: #FFF;
     padding:20px;
     position: relative;
-    border-radius: 2px;
-    background-color: #FDEB9C;
+    border-radius: 5px;
+    background-color: #231816;
     overflow: hidden;
     text-align: center;
 }
 #slider.success{
-    background-color: #E5EE9F;
+    background-color: #231816;
 }
 #label{
     width: 40px;
