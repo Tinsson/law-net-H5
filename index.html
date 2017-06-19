@@ -7,11 +7,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="./css/onepage-scroll.css">
 	<link rel="stylesheet" href="./css/jquery.slideunlock.css">
-	<link rel="stylesheet" href="./css/animate.min.css">
+	<!--<link rel="stylesheet" href="./css/animate.min.css">-->
 	<link rel="stylesheet" href="./css/main.css">
 	<script src="./js/jquery.js"></script>
 	<script src="./js/jquery-ui.min.js"></script>
-	<!--<script src="./js/jquery.mobile.min.js"></script>-->
 	<script src="./js/jquery.onepage-scroll.js"></script>
 	<script src="./js/jquery.slideunlock.js"></script>
 	<script src="./js/common.js"></script>
@@ -19,10 +18,20 @@
 <body>
 	<div id="fullpage">
 		<div id="rcpage1" class="section">
-
+            <p class="first_tip font-fade">欢迎，未知用户，请继续探索真相，但您接下去的行为可能触发网络安全...</p>
 		</div>
 		<div id="rcpage2" class="section">
-
+            <div class="tipBox">
+                <p id="st1" class="second_tip"><span class="point">工业革命</span>主导了世界经济的发展，这一次我们主导了全世界！</p>
+                <p id="st2" class="second_tip">请根据提示从下面图片中选择正确的一张图</p>
+            </div>
+            <div class="option">
+                <img class="pic" src="./images/option1.jpg" alt="">
+                <img class="pic" src="./images/option2.jpg" alt="">
+                <img class="pic" src="./images/option3.jpg" alt="">
+                <img class="pic" src="./images/option4.jpg" alt="">
+                <img class="pic" src="./images/option5.jpg" alt="">
+            </div>
 		</div>
 		<div id="rcpage3" class="section">
 
@@ -34,7 +43,7 @@
 
 	<div class="music rotate">
 		<audio autoplay id="ado" loop="loop">
-			<source src="./audio/1.mp3"></source>
+			<source src="./audio/pirate.mp3"></source>
 		</audio>
 	</div>
 	<div class="arrow"></div>
@@ -50,7 +59,16 @@
 		</div>
 	</div>
 	<script>
-
+        $(document).one('WeixinJSBridgeReady', function () {
+            var audio = document.getElementById("ado");
+            audio.play(); //执行一次
+            audio.setAttribute('src', './audio/pirate.mp3'); // 替换src
+            audio.load();
+        })
+        // 监听摇晃事件简化版
+        window.addEventListener('devicemotion', function () {
+            document.getElementById("ado").play(); // 成功播放
+        }, false);
 	</script>
 </body>
 </html>

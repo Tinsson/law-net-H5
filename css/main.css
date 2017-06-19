@@ -5,11 +5,11 @@ body{
 .clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
 .clearfix{*+height:1%}
 #rcpage1{
-	background: url("../images/bg1.png") no-repeat top;
+	background: url("../images/bg1.jpg") no-repeat top;
 	background-size: cover;
 }
 #rcpage2{
-	background: url("../images/bg2.png") no-repeat center;
+	background: url("../images/bg2.jpg") no-repeat center;
 	background-size: cover;
 }
 #rcpage3{
@@ -66,77 +66,33 @@ body{
 	width: 100%;
 	height:	100%;
 }
-.group{
-	font-size: 14px; 
-	height: 30px;
-	padding-bottom: 15px;
-}
-.group form{
-	position: relative;
-}
-.group .labels{
-	display: block;
-	float: left;
-	vertical-align: middle;	
-	padding-right: 15px;
-	margin-left: 5%;
-	margin-top: 5px; 
-}
-.group .input-box{
-	float: left;
-	box-shadow: none;
-	display: block;
-	width: 65%;
-	height: 22px;
-	padding: 6px 6px;
-	font-size: 14px;
-	color: #555;
-	background-color: #FFF;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	vertical-align: middle;	
-	font-family: "Microsoft YaHei";
-	-webkit-appearance: none;
-}
-.group .commit{
-	width: 80%;
-	height: 35px;
-	margin-left: 10%;
-	color: #FFF;
-	background-color: #23C36A;
-	border: none;
-	border-radius: 5px;
-	padding: 5px 0;
-	font-size: 16px;
-	font-family: "Microsoft YaHei";
-}
-.mask .close{
-	width: 35px;
-	height: 35px;
-	position: absolute;
-	right: -10px;
-	top: -10px;
-	background: url("../images/close.png") no-repeat center;
-	background-size: cover;
-}
 .music{
 	width: 40px;
 	height: 40px;
 	position: absolute;
 	top: 15px;
 	right: 15px;
-	background: url("../images/music.png") no-repeat center;
+	background: url("../images/music1.png") no-repeat center;
 	background-size: cover;
+}
+.first_tip{
+	text-indent: 28px;
+	font-size: 14px;
+	color: #dcd7d7;
+	width: 80vw;
+	margin-left: 10vw;
+	margin-top: 40vh;
 }
 .fade-sm{
 	animation: fade1 1s linear;
 	-webkit-animation: fade1 1s linear;
 }
 .rotate{
-	animation: change 2s linear infinite;
-	-webkit-animation:change 2s linear infinite;
+	animation: change 2.5s linear infinite;
+	-webkit-animation:change 2.5s linear infinite;
 }
 .arrow{
+	opacity: 0;
 	width: 30px;
 	height: 30px;
 	position: absolute;
@@ -144,8 +100,46 @@ body{
 	left: calc(50% - 15px);
 	background: url("../images/arrow.png") no-repeat center;
 	background-size: cover;
+}
+.arr_float{
+	opacity:1;
 	animation: float 2s linear infinite;
 	-webkit-animation:float 2s linear infinite;
+}
+.font-fade{
+	opacity: 1;
+	animation: fade2 2s linear infinite;
+	-webkit-animation:fade2 2s linear infinite;
+}
+.tipBox{
+	width: 100%;
+	margin-top: 10vh;
+}
+.tipBox .second_tip{
+	text-indent: 32px;
+	opacity: 0;
+	font-size: 16px;
+	color: #dcd7d7;
+	width: 88vw;
+	margin: 5px 0;
+	margin-left: 6vw;
+	line-height: 20px;
+}
+.tipBox .second_tip .point{
+	font-weight: bold;
+	color: #E70012;
+}
+.option{
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: 8vw;
+}
+.option .pic{
+	display: inline-block;
+	width: 40vw;
 }
 @keyframes change{
 	0% {-webkit-transform:rotate(360deg);}
@@ -158,5 +152,77 @@ body{
 
 @keyframes fade1{
 	0%	{opacity: 1;transform: scale3d(1,1,1);}
-	100%{opacity: 0;transform: scale3d(0.9,0.9,0.9);}
+	100%{opacity: 0;transform: scale3d(0.8,0.8,0.8);}
+}
+@keyframes fade2{
+	0%  {opacity: 1;}
+	50% {opacity: 0.4;}
+	100%{opacity: 1;}
+}
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.animated.infinite {
+	animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+	animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+	animation-duration: .75s;
+}
+@keyframes slideInUp {
+	from {
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+.slideInUp {
+	animation-name: slideInUp;
+}
+@keyframes bounceInUp {
+	from, 60%, 75%, 90%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	from {
+		opacity: 0;
+		transform: translate3d(0, 3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translate3d(0, -20px, 0);
+	}
+
+	75% {
+		transform: translate3d(0, 10px, 0);
+	}
+
+	90% {
+		transform: translate3d(0, -5px, 0);
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.bounceInUp {
+	animation-name: bounceInUp;
 }
