@@ -138,6 +138,7 @@ body{
 	padding: 8vw;
 }
 .option .pic{
+	opacity: 0;
 	display: inline-block;
 	width: 40vw;
 }
@@ -225,4 +226,70 @@ body{
 
 .bounceInUp {
 	animation-name: bounceInUp;
+}
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideInLeft {
+	animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+	from {
+		opacity: 0;
+		transform: translate3d(100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideInRight {
+	animation-name: slideInRight;
+}
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideInUp {
+	animation-name: slideInUp;
+}
+@keyframes rotateIn {
+	from {
+		transform-origin: center;
+		transform: rotate3d(0, 0, 1, -200deg);
+		opacity: 0;
+	}
+
+	to {
+		transform-origin: center;
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.rotateIn {
+	animation-name: rotateIn;
 }

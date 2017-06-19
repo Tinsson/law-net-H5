@@ -31,7 +31,22 @@ $(document).ready(function(){
 
 	function picShow(no){
 		if(no == 1){
-			
+			$(".pic").eq(0).addClass("animated slideInLeft");
+			$(".pic").eq(1).addClass("animated slideInRight");
+			$(".pic").eq(0).one("webkitAnimationEnd animationend",function(){
+				$(".pic").eq(0).removeClass("animated slideInLeft").css("opacity",1);
+				$(".pic").eq(1).removeClass("animated slideInRight").css("opacity",1);
+				$(".pic").eq(2).addClass("animated slideInUp");
+				$(".pic").eq(3).addClass("animated slideInUp");
+				$(".pic").eq(2).one("webkitAnimationEnd animationend",function(){
+					$(".pic").eq(2).removeClass("animated slideInUp").css("opacity",1);
+					$(".pic").eq(3).removeClass("animated slideInUp").css("opacity",1);
+					$(".pic").eq(4).addClass("animated rotateIn");
+					$(".pic").eq(4).one("webkitAnimationEnd animationend",function(){
+						$(".pic").eq(4).removeClass("animated rotateIn").css("opacity",1);
+					})
+				})
+			});
 		}
 	}
 	$("#rcpage1").on("click",function(){
