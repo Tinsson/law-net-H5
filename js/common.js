@@ -49,6 +49,13 @@ $(document).ready(function(){
 			});
 		}
 	}
+	$(".pic").filter(function(index){
+		if(index == 0 || index == 2){
+			return true;
+		}
+	}).on("click",function () {
+		$("#fullpage").moveDown();
+	})
 	$("#rcpage1").on("click",function(){
 		console.log(11111);
 	})
