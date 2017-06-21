@@ -49,8 +49,13 @@ $(document).ready(function(){
 			});
 		}
 	}
-	$("#rcpage1").on("click",function(){
-		console.log(11111);
+
+	$(".pic").filter(function(i){
+		if(i == 0 || i == 2){
+			return true;
+		}
+	}).on("touchend",function(){
+		$("#fullpage").moveDown();
 	})
 
     var slider = new SliderUnlock("#slider", {
