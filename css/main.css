@@ -13,19 +13,15 @@ body{
 	background-size: cover;
 }
 #rcpage3{
-	background: url("../images/bg3.png") no-repeat center;
+	background: url("../images/bg3.jpg") no-repeat center;
 	background-size: cover;
 }
 #rcpage4{
-	background: url("../images/bg4.png") no-repeat center;
+	background: url("../images/bg4.jpg") no-repeat center;
 	background-size: cover;
 }
 #rcpage5{
 	background: url("../images/bg5.png") no-repeat center;
-	background-size: cover;
-}
-#rcpage6{
-	background: url("../images/bg6.png") no-repeat center;
 	background-size: cover;
 }
 #label{
@@ -129,18 +125,48 @@ body{
 	font-weight: bold;
 	color: #E70012;
 }
-.option{
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	padding: 9vw;
+.tipBox .normal_tip{
+	text-indent: 32px;
+	font-size: 16px;
+	color: #dcd7d7;
+	width: 88vw;
+	margin: 5px 0;
+	margin-left: 6vw;
+	line-height: 20px;
 }
+.tipBox .normal_tip .point{
+	font-weight: bold;
+	color: #E70012;
+}
+.option{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+	padding: 7vw;
+}
+
 .option .pic{
 	opacity: 0;
 	display: inline-block;
 	width: 40vw;
+	margin-bottom: 7vw;
+}
+.option .pic.last{
+	margin-left: 23vw;
+	margin-top: 5vw;
+}
+.option .text{
+	box-sizing: border-box;
+	opacity: 0;
+	display: inline-block;
+	width: 40vw;
+	padding-left: 8vw;
+	font-size: 18px;
+	color: #FFF;
+	line-height: 12vh;
 }
 @keyframes change{
 	0% {-webkit-transform:rotate(360deg);}
@@ -221,6 +247,7 @@ body{
 
 	to {
 		transform: translate3d(0, 0, 0);
+		opacity: 1;
 	}
 }
 
@@ -292,4 +319,37 @@ body{
 
 .rotateIn {
 	animation-name: rotateIn;
+}
+
+@keyframes flipInX {
+	from {
+		transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+	}
+
+	to {
+		transform: perspective(400px);
+		opacity: 1;
+	}
+}
+
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-name: flipInX;
 }

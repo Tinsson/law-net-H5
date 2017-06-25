@@ -30,14 +30,28 @@
                 <img class="pic" src="./images/option2.jpg" alt="">
                 <img class="pic" src="./images/option3.jpg" alt="">
                 <img class="pic" src="./images/option4.jpg" alt="">
-                <img class="pic" src="./images/option5.jpg" alt="">
+                <img class="pic last" src="./images/option5.jpg" alt="">
             </div>
 		</div>
 		<div id="rcpage3" class="section">
-
+			<div id="third_box" class="tipBox" style="display: none">
+				<p id="tt1" class="normal_tip">当人类掌握了我们的<span class="point">语言</span>，这到底是灾祸还是希望？</p>
+				<p id="tt2" class="normal_tip">请输入正确的答案</p>
+				<p id="tt3" class="normal_tip">1+1=10</p>
+				<p id="tt4" class="normal_tip">1761=？</p>
+			</div>
+			<div class="option">
+				<span class="text">A:6E1</span>
+				<span class="text">B:3341</span>
+				<span class="text">C:11011100001</span>
+				<span class="text">D：1761</span>
+			</div>
 		</div>
 		<div id="rcpage4" class="section">
-
+			<div class="tipBox">
+				<p id="ft1" class="second_tip">灾祸可以摧毁一切，而重铸可以带来希望</p>
+				<p id="ft2" class="second_tip">将图片重新组合完整</p>
+			</div>
 		</div>
 	</div>
 
@@ -59,7 +73,7 @@
 		</div>
 	</div>
 	<script>
-        $(document).one('WeixinJSBridgeReady', function () {
+        /*$(document).one('WeixinJSBridgeReady', function () {
             var audio = document.getElementById("ado");
             audio.play(); //执行一次
             audio.setAttribute('src', './audio/pirate.mp3'); // 替换src
@@ -68,7 +82,7 @@
         // 监听摇晃事件简化版
         window.addEventListener('devicemotion', function () {
             document.getElementById("ado").play(); // 成功播放
-        }, false);
+        }, false);*/
 	</script>
 </body>
 </html>
