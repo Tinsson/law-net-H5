@@ -121,6 +121,9 @@ body{
 	margin-left: 6vw;
 	line-height: 20px;
 }
+.tipBox .second_tip.ft{
+	line-height: 30px;
+}
 .tipBox .second_tip .point{
 	font-weight: bold;
 	color: #E70012;
@@ -145,18 +148,21 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	align-content: space-between;
-	padding: 7vw;
+	padding: 12vw 14vw;
 }
 
 .option .pic{
 	opacity: 0;
 	display: inline-block;
-	width: 40vw;
+	width: 30vw;
 	margin-bottom: 7vw;
+	box-sizing: border-box;
+}
+.option .pic.select{
+	border: 2px solid #FF5722;
 }
 .option .pic.last{
-	margin-left: 23vw;
-	margin-top: 5vw;
+	margin-left: 21vw;
 }
 .option .text{
 	box-sizing: border-box;

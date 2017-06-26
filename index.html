@@ -23,14 +23,14 @@
 		<div id="rcpage2" class="section">
             <div class="tipBox">
                 <p id="st1" class="second_tip"><span class="point">工业革命</span>主导了世界经济的发展，这一次我们主导了全世界！</p>
-                <p id="st2" class="second_tip">请根据提示从下面图片中选择正确的一张图</p>
+                <p id="st2" class="second_tip">请根据提示从下面图片中选择正确的两张图</p>
             </div>
-            <div class="option">
-                <img class="pic" src="./images/option1.jpg" alt="">
-                <img class="pic" src="./images/option2.jpg" alt="">
-                <img class="pic" src="./images/option3.jpg" alt="">
-                <img class="pic" src="./images/option4.jpg" alt="">
-                <img class="pic last" src="./images/option5.jpg" alt="">
+            <div id="picBox" class="option">
+                <img class="pic" data-id="1" src="./images/option1.jpg" alt="">
+                <img class="pic" data-id="2" src="./images/option2.jpg" alt="">
+                <img class="pic" data-id="3" src="./images/option3.jpg" alt="">
+                <img class="pic" data-id="4" src="./images/option4.jpg" alt="">
+                <img class="pic" data-id="5" src="./images/option5.jpg" alt="">
             </div>
 		</div>
 		<div id="rcpage3" class="section">
@@ -49,8 +49,8 @@
 		</div>
 		<div id="rcpage4" class="section">
 			<div class="tipBox">
-				<p id="ft1" class="second_tip">灾祸可以摧毁一切，而重铸可以带来希望</p>
-				<p id="ft2" class="second_tip">将图片重新组合完整</p>
+				<p id="ft1" class="second_tip ft">灾祸可以摧毁一切，而重铸可以带来希望</p>
+				<p id="ft2" class="second_tip ft">将图片重新组合完整</p>
 			</div>
 		</div>
 	</div>
@@ -71,6 +71,14 @@
 				<span id="lableTip">滑动解锁</span>
 			</div>
 		</div>
+	</div>
+	<div class="error">
+		<div class="avatar">
+			<img src="./images/error.png" alt="">
+		</div>
+		<a class="back" href="javascript:;">
+			返回探索
+		</a>
 	</div>
 	<script>
         /*$(document).one('WeixinJSBridgeReady', function () {
